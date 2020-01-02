@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+@using TeaMVC.Models
+
+@model List<Goods>
+
+<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>显示商品列表</title>
+</head>
+<body>
+    <div class="table">
+        <table>
+            <tr>
+                @using (Html.BeginForm())
+                {
+                    <td>
+                        <input type="text" name="name" />
+                        <input type="submit" name="name" value="查找" class="btn btn-info" />
+                    </td>
+                }
+                <td><input type="button" name="name" value="添加" class="btn btn-info" onclick="location.href='/UserInfo/Add'" /></td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div>
+        <table class="table-bordered table" style="text-align:center">
+            <tr style="background-color:darkturquoise">
+                <td>商品编号</td>
+                <td>图片</td>
+                <td>商品名称</td>
+                <td>商品单价</td>
+                <td>库存数量</td>
+                <td>商品描述</td>
+                <td>商品状态</td>
+                <td>操作</td>
+            </tr>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@item.GNo</td>
+                    <td>@item.GoodsPicture</td>
+                    <td>@item.GName</td>
+                    <td>@item.GPrice</td>
+                    <td>@item.GNum</td>
+                    <td>@item.GRemark</td>
+                    <td>@item.GState</td>
+                    <td>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</body>
+</html>
