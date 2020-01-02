@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "添加商品";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        <table class="table table-responsive-lg">
+            <tr>
+                <td>商品图片:</td>
+                <td><input id="File1" type="file" /></td>
+            </tr>
+            <tr>
+                <td>商品名称:</td>
+                <td><input type="text" name="" value="" /></td>
+            </tr>
+            <tr>
+                <td>商品单价</td>
+                <td><input type="text" name="" value="" /></td>
+            </tr>
+            <tr>
+                <td>库存数量</td>
+                <td><input type="text" name="" value="" /></td>
+            </tr>
+            <tr>
+                <td>商品备注</td>
+                <td><input type="text" name="" value="" /></td>
+            </tr>
+            <tr>
+                <td>商品状态</td>
+                <td>
+                    <select id="Select1" style="width:150px">
+                        <option>上架</option>
+                        <option>下架</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Submit1" type="submit" value="添加" class="btn btn-info" />
+                    <input type="button" name="name" value="返回" class="btn btn-info" onclick="location.href='/Goods/ShowGoods'"/>
+                </td>
+            </tr>
+        </table>
+    </div>
+}

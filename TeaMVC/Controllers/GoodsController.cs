@@ -32,5 +32,15 @@ namespace TeaMVC.Controllers
             List<Goods> list = JsonConvert.DeserializeObject<List<Goods>>(str);
             return View(list);
         }
+
+        /// <summary>
+        /// 添加一名商品信息
+        /// </summary>
+        /// <returns></returns>
+        public IActionResult AddGoods()
+        {
+            return View();
+        }
+        
     }
 }
