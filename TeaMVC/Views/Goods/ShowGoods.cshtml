@@ -45,19 +45,36 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <td>@item.GNo</td>
-                    <td>@item.GoodsPicture</td>
-                    <td>@item.GName</td>
-                    <td>@item.GPrice</td>
-                    <td>@item.GNum</td>
-                    <td>@item.GRemark</td>
-                    <td>@item.GState</td>
-                    <td>
-                        <a href="#">上架</a>
-                        <a href="#">下架</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>@item.GNo</td>
+                        <td>@item.GoodsPicture</td>
+                        <td>@item.GName</td>
+                        <td>@item.GPrice</td>
+                        <td>@item.GNum</td>
+                        <td>@item.GRemark</td>
+                        <td>
+                            @if (@item.GState == "下架")
+                            {
+                                <span style="color:red">@item.GState</span>
+                            }
+                            else
+                            {
+                                <span>@item.GState</span>
+                            }
+
+                        </td>
+                        <td>
+                            @if (item.GState == "上架")
+                            {
+                                <a href="/Goods/UpStateTwo?id=@item.GNo">下架</a>
+                            }
+                            else
+                            {
+                                <a href="/Goods/UpStateOne?id=@item.GNo">上架</a>
+                            }
+                            @*<a href="/Goods/UpGoods?id=@item.GNo">修改商品</a>*@
+                        </td>
+                    </tr>
                 }
             </tbody>
 
