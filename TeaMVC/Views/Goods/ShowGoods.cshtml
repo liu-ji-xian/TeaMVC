@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/IndexViewStart.cshtml";
 }
 @using TeaMVC.Models
 
@@ -14,13 +14,13 @@
     <title>显示商品列表</title>
 </head>
 <body>
-    <div class="table">
+    <div>
         <table>
             <tr>
                 @using (Html.BeginForm())
                 {
                     <td>
-                        <input type="text" name="name" />
+                        <input type="text" name="name"  class=""/>
                         <input type="submit" name="name" value="查找" class="btn btn-info" />
                     </td>
                 }
@@ -29,10 +29,11 @@
         </table>
 
     </div>
-
+    <br />
     <div>
-        <table class="table-bordered table" style="text-align:center">
-            <tr style="background-color:darkturquoise">
+        @*background-color:darkturquoise*@
+        <table class="table-bordered table" style="text-align: center">
+            <tr style="background-image:url('bg1.png')">
                 <td>商品编号</td>
                 <td>图片</td>
                 <td>商品名称</td>

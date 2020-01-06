@@ -87,6 +87,10 @@ namespace TeaMVC.Controllers
             }
         }
 
+        /// <summary>
+        /// 商品上架
+        /// </summary>
+        /// <param name="id"></param>
         [HttpGet]
         public void UpStateOne(string id)
         {
@@ -101,7 +105,10 @@ namespace TeaMVC.Controllers
             }
         }
 
-
+        /// <summary>
+        /// 商品下架
+        /// </summary>
+        /// <param name="id"></param>
         [HttpGet]
         public void UpStateTwo(string id)
         {

@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = "~/Views/Shared/IndexViewStart.cshtml";
+}
+
+@using TeaMVC.Models
+@model List<Users>
+
+<!DOCTYPE html>
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>添加用户</title>
+</head>
+<body>
+    <h2 class="text-center">添加用户</h2>
+    @using (Html.BeginForm())
+    {
+        <div class="container">
+            <table class="table table-bordered">
+                <tr>
+                    <td style="width:200px">用户昵称</td>
+                    <td><input type="text" name="UName" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px">用户真实姓名</td>
+                    <td><input type="text" name="URealName" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px">用户生日</td>
+                    <td><input type="date" name="Ubirthday" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px">用户类别</td>
+                    <td>
+                        <select id="Select1" name="UType">
+                            <option value="普通用户">普通用户</option>
+                            <option value="管理员">管理员</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:200px">收货姓名</td>
+                    <td><input type="text" name="ConsigneeName" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px">收货号码</td>
+                    <td><input type="text" name="ConsigneePhone" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px">收货地址</td>
+                    <td><input type="text" name="ConsigneeAddress" /></td>
+                </tr>
+                <tr>
+                    <td style="width:200px"></td>
+                    <td><input type="submit" value="添加" class="btn btn-dark"/></td>
+                </tr>
+            </table>
+        </div>
+
+        
+    }
+
+
+</body>
+</html>
